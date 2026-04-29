@@ -1,0 +1,319 @@
+{
+  "meta": {
+    "year": "2026년",
+    "program": "KDT",
+    "subject": "UI 구현",
+    "courseName": "(스마트웹&콘텐츠개발) UIUX 웹디자인 (웹퍼블리셔) 양성과정",
+    "trainingPeriod": "2026.05.13. ~ 2027.02.12",
+    "institution": "SBS아카데미컴퓨터아트학원",
+    "ncsClassification": {
+      "major": "20. 정보통신",
+      "middle": "01. 정보기술",
+      "minor": "02. 정보기술개발",
+      "detail": "07. UI/UX엔지니어링"
+    }
+  },
+
+  "tableOfContents": [
+    { "no": 1, "title": "훈련생 종합평가결과표" },
+    { "no": 2, "title": "채점기준표" },
+    { "no": 3, "title": "훈련생 평가지" },
+    { "no": 4, "title": "훈련생 채점지" },
+    { "no": 5, "title": "훈련생 평가근거자료" }
+  ],
+
+  "unitInfo": {
+    "unitName": "UI 구현",
+    "unitCode": "2001020708_19v3",
+    "unitLevel": "5수준",
+    "elements": [
+      "가. UI 설계 검토하기",
+      "나. UI 구현 표준 검토하기"
+    ]
+  },
+
+  "evaluationInfo": {
+    "date": "2026년 08월 20일",
+    "location": "I-CLASS",
+    "duration": "2시간",
+    "method": "포트폴리오",
+    "evaluator": "박 석 호",
+    "instructor": "박 석 호",
+    "headCount": 13
+  },
+
+  "scoringCriteria": [
+    {
+      "category": "UI 설계\n검토하기",
+      "items": [
+        {
+          "criterion": "UI 설계서와 GUI 디자인 가이드를 바탕으로 구현 프로세스를 검토할 수 있다.",
+          "scores": {
+            "high": "UI 설계와 가이드 간 Gap을 정확히 분석하고 구현 가능성을 체계적으로 검토한다.",
+            "mid": "UI 설계 검토를 수행하고 구현 가능성을 검토한다.",
+            "low": "UI 설계 검토가 미흡하거나 Gap 분석이 부족하다."
+          }
+        }
+      ]
+    },
+    {
+      "category": "UI 구현\n표준 검토하기",
+      "items": [
+        {
+          "criterion": "UI 구현 표준을 검토하고 요구사항을 반영할 수 있다.",
+          "scores": {
+            "high": "UI 구현 표준안을 체계적으로 작성하고 요구사항을 완벽히 반영한다.",
+            "mid": "UI 구현 표준을 검토하고 요구사항을 반영한다.",
+            "low": "UI 구현 표준 검토 및 요구사항 반영이 미흡하다."
+          }
+        }
+      ]
+    },
+    {
+      "category": "Figma\n와이어프레임\n스토리보드",
+      "items": [
+        {
+          "criterion": "Figma를 활용해 UI 설계도를 와이어프레임 스토리보드 형식으로 제작할 수 있다.",
+          "scores": {
+            "high": "Figma로 고품질 와이어프레임과 인터랙티브 스토리보드를 완성도 높게 제작한다.",
+            "mid": "Figma로 와이어프레임 스토리보드를 제작한다.",
+            "low": "와이어프레임 및 스토리보드 제작이 미흡하다."
+          }
+        }
+      ]
+    },
+    {
+      "category": "AI 활용\n설계 보완",
+      "items": [
+        {
+          "criterion": "ChatGPT, Gemini 등 AI를 활용하여 UI 설계도를 보완·개선할 수 있다.",
+          "scores": {
+            "high": "AI를 창의적으로 활용하여 설계도의 문제점을 분석하고 효과적으로 보완한다.",
+            "mid": "AI를 활용하여 설계도를 보완한다.",
+            "low": "AI 활용 보완 작업이 미흡하거나 효과가 없다."
+          }
+        }
+      ]
+    },
+    {
+      "category": "태도 및\n흥미",
+      "items": [
+        {
+          "criterion": "수업내용과 관련 없는 불필요한 작업을 하지 않는다.",
+          "scores": {
+            "high": "수업내용에 관련 없는 작업을 하지 않고 작업함",
+            "mid": "수업시간에 관련 없는 작업을 가끔 하며 집중하지 못함",
+            "low": "수업시간에 집중하지 않고 매사에 딴 짓함"
+          }
+        },
+        {
+          "criterion": "수업시간에 교사와 호흡하며 집중하는 태도를 나타낸다.",
+          "scores": {
+            "high": "교사와 호흡하며 집중하는 태도를 보임",
+            "mid": "혼자 작업하느라 바빠서 교사와 호흡하지 못함",
+            "low": "아무것도 하지 않음"
+          }
+        }
+      ]
+    },
+    {
+      "category": "의사전달능력",
+      "items": [
+        {
+          "criterion": "발표를 할 때, 듣는 청중에게 명확하게 의사를 전달하며, 또렷한 목소리로 전달할 수 있다",
+          "scores": {
+            "high": "또렷한 목소리로 무엇을 말하고자 하는지 분명하게 잘 발표함",
+            "mid": "분명치 않은 조용한 목소리로 무엇을 말하고자 하는지 발표함",
+            "low": "목소리도 작고, 무엇을 말하고자 하는지도 모르겠음"
+          }
+        }
+      ]
+    },
+    {
+      "category": "용모와\n태도",
+      "items": [
+        {
+          "criterion": "용모를 단정히 하고, 확신에 찬 태도로 차분하게 발표할 수 있다",
+          "scores": {
+            "high": "용모를 단정히 하고, 확신에 찬 태도로 발표함",
+            "mid": "용모는 단정하나 힘이 없는 모습임",
+            "low": "용모도 흐트러져있고, 불안한 태도로 발표함"
+          }
+        }
+      ]
+    },
+    {
+      "category": "시선의\n적극성",
+      "items": [
+        {
+          "criterion": "시선을 청중을 적극적으로 한명씩 보면서 발표할 수 있다",
+          "scores": {
+            "high": "전체적으로 보면서 자신의 디자인을 발표함",
+            "mid": "전체적으로 보긴 하지만 거의 시안만을 보면서 발표함",
+            "low": "아래를 쳐다보거나 시선을 어디에 두어야 할지 모름"
+          }
+        }
+      ]
+    },
+    {
+      "category": "질문에\n답변하는\n자신감",
+      "items": [
+        {
+          "criterion": "질의 응답시간에 다른 사람의 질의에 자신감있게 잘 답변할 수 있다",
+          "scores": {
+            "high": "질의 응답에 자신감있게 또박또박 잘 답변함",
+            "mid": "질의 응답에 잠시 머뭇거리면서 답변함",
+            "low": "질의 응답에 답변하지 못함"
+          }
+        }
+      ]
+    }
+  ],
+
+  "detailedScoringItems": [
+    {
+      "category": "UI 설계\n검토하기",
+      "items": [
+        { "no": "1.1", "description": "UI 설계서와 GUI 디자인 가이드를 바탕으로 구현 프로세스 및 Gap을 검토할 수 있다." }
+      ]
+    },
+    {
+      "category": "UI 구현\n표준 검토하기",
+      "items": [
+        { "no": "2.1", "description": "UI 구현 표준을 검토하고 요구사항을 반영한 표준안을 작성할 수 있다." }
+      ]
+    },
+    {
+      "category": "Figma\n와이어프레임\n스토리보드",
+      "items": [
+        { "no": "3.1", "description": "Figma를 활용하여 UI 설계도를 와이어프레임 및 스토리보드 형식으로 제작할 수 있다." }
+      ]
+    },
+    {
+      "category": "AI 활용\n설계 보완",
+      "items": [
+        { "no": "4.1", "description": "ChatGPT, Gemini 등 AI 도구를 활용하여 UI 설계도를 분석·보완할 수 있다." }
+      ]
+    },
+    {
+      "category": "태도 및 흥미",
+      "items": [
+        { "no": "5.1", "description": "수업내용과 관련 없는 불필요한 작업을 하지 않는다." },
+        { "no": "5.2", "description": "수업시간에 교사와 호흡하며 집중하는 태도를 나타낸다." }
+      ]
+    },
+    {
+      "category": "의사전달능력",
+      "items": [
+        { "no": "6.1", "description": "발표를 할 때, 듣는 청중에게 명확하게 의사를 전달하며, 또렷한 목소리로 전달할 수 있다" }
+      ]
+    },
+    {
+      "category": "용모와 태도",
+      "items": [
+        { "no": "7.1", "description": "용모를 단정히 하고, 확신에 찬 태도로 차분하게 발표할 수 있다" }
+      ]
+    },
+    {
+      "category": "시선의 적극성",
+      "items": [
+        { "no": "8.1", "description": "시선을 청중을 적극적으로 한명씩 보면서 발표할 수 있다" }
+      ]
+    },
+    {
+      "category": "질문에 답변하는\n자신감",
+      "items": [
+        { "no": "9.1", "description": "질의 응답시간에 다른 사람의 질의에 자신감있게 잘 답변할 수 있다" }
+      ]
+    }
+  ],
+
+  "achievementLevels": [
+    { "level": "5수준", "label": "매우우수", "range": "100점-90점" },
+    { "level": "4수준", "label": "우수",    "range": "89점-80점" },
+    { "level": "3수준", "label": "보통",    "range": "79점-70점" },
+    { "level": "2수준", "label": "미흡",    "range": "69점-60점" },
+    { "level": "1수준", "label": "매우미흡","range": "60점미만"  }
+  ],
+
+  "totalScoreItems": 9,
+
+  "evaluationContent": {
+    "targets": ["자신이 선택한 웹사이트 또는 모바일 앱"],
+    "description": "이전 학습(요구분석 → 콘셉트 기획 → UI 디자인) 결과를 바탕으로 NCS 학습모듈(UI 구현, LM2001020708_19v3)의 능력단위요소(가. UI 설계 검토하기, 나. UI 구현 표준 검토하기)에 따라 UI 설계도를 Figma로 와이어프레임·스토리보드 형태로 제작하고, ChatGPT·Gemini 등 AI 도구를 활용하여 설계도를 보완한 포트폴리오를 제출하시오.",
+    "tasks": [
+      {
+        "no": 1,
+        "title": "주제",
+        "description": "자신이 선택한 웹사이트(또는 앱)의 UI 구현 포트폴리오 제작"
+      },
+      {
+        "no": 2,
+        "title": "UI 구현 제작 내용",
+        "subItems": [
+          {
+            "no": "1)",
+            "title": "UI 설계 검토하기 (가)",
+            "details": [
+              "a. 이전 UI 설계서와 GUI 디자인 가이드를 바탕으로 Gap 분석 및 구현 프로세스 검토"
+            ]
+          },
+          {
+            "no": "2)",
+            "title": "UI 구현 표준 검토하기 (나)",
+            "details": [
+              "a. UI 구현 표준 검토 및 요구사항 반영"
+            ]
+          },
+          {
+            "no": "3)",
+            "title": "Figma 와이어프레임·스토리보드 제작",
+            "details": [
+              "a. Figma를 활용하여 UI 설계도를 와이어프레임 및 인터랙티브 스토리보드 형식으로 제작"
+            ]
+          },
+          {
+            "no": "4)",
+            "title": "AI 활용 설계 보완",
+            "details": [
+              "a. ChatGPT, Gemini 등 AI 도구를 활용하여 UI 설계도의 문제점 분석 및 보완·개선",
+              "b. AI 보완 전·후 비교 결과물 포함"
+            ]
+          }
+        ]
+      },
+      {
+        "no": 3,
+        "title": "요구사항",
+        "requirements": [
+          "1) 발표시간은 1인당 3~5분 내외로 진행하며 별도의 준비시간은 2분 내외로 하시오 (질의시간 별도)",
+          "2) 발표자료는 PDF 파일로 준비하시오 (포트폴리오 포함)",
+          "3) 제출파일은 Figma 공유 링크, Figma 파일 내보내기(PDF·이미지), AI 보완 결과물(스크린샷 또는 텍스트), Photoshop/Illustrator 원본(필요 시), PDF 보고서 등을 포함하여 UIUX구현_이름.zip로 압축하여 제출하시오",
+          "4) 평가시간 내에 포트폴리오를 완성 후 제출하시오."
+        ]
+      }
+    ]
+  },
+
+  "submissionInfo": {
+    "format": "아래 해당하는 파일들을 압축하여 UIUX구현_이름.zip로 저장하여 제출",
+    "fileName": "UI구현_이름.pdf (파일확장자 제약없음)",
+    "additionalFiles": "Figma 공유 URL (텍스트 파일 또는 PDF 포함), Figma 내보내기 PDF·JPG, AI 보완 결과물(ChatGPT/Gemini 스크린샷 또는 로그), PSD/AI 원본(선택), PDF 보고서, 관련 이미지 및 텍스트 파일 등"
+  },
+
+  "students": [
+    { "no": 1,  "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 2,  "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 3,  "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 4,  "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 5,  "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 6,  "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 7,  "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 8,  "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 9,  "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 10, "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 11, "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 12, "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 13, "name": "", "score": null, "pass": null, "comment": "" }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "meta": {
+    "year": "2026년",
+    "program": "KDT",
+    "subject": "스마트문화 앱 개발",
+    "courseName": "(스마트웹&콘텐츠개발) UIUX 웹디자인 (웹퍼블리셔) 과정",
+    "trainingPeriod": "2026.05.13. ~ 2027.02.11",
+    "institution": "SBS아카데미컴퓨터아트학원",
+    "ncsClassification": {
+      "major": "08. 문화·예술·디자인·방송",
+      "middle": "03. 문화콘텐츠",
+      "minor": "02. 문화콘텐츠제작",
+      "detail": "09. 스마트문화앱콘텐츠제작"
+    }
+  },
+
+  "tableOfContents": [
+    { "no": 1, "title": "훈련생 종합평가결과표" },
+    { "no": 2, "title": "채점기준표" },
+    { "no": 3, "title": "훈련생 평가지" },
+    { "no": 4, "title": "훈련생 채점지" },
+    { "no": 5, "title": "훈련생 평가근거자료" }
+  ],
+
+  "unitInfo": {
+    "unitName": "스마트문화앱 개발환경 구축",
+    "unitCode": "0803020904_24v4",
+    "unitLevel": "5수준",
+    "elements": ["가. 앱 개발 환경 선정하기", "나. 앱 개발 방법론 선정 및 개발 환경 구축하기", "다. 앱 개발 계획 수립하기"]
+  },
+
+  "evaluationInfo": {
+    "date": "2026년 05월 26일",
+    "location": "I-CLASS",
+    "duration": "2시간",
+    "method": "문제해결시나리오",
+    "evaluator": "박 석 호",
+    "instructor": "박 석 호",
+    "headCount": 13
+  },
+
+  "scoringCriteria": [
+    {
+      "category": "앱 개발 환경\n조사 및 선정",
+      "items": [
+        {
+          "criterion": "문화 콘텐츠 기획서에 적합한 개발 환경(VSCode, GitHub 등)을 조사·선정할 수 있다.",
+          "scores": {
+            "high": "개발 환경을 잘 조사하고 적합성을 명확히 설명할 수 있다.",
+            "mid": "개발 환경을 조사하고 선정할 수 있다.",
+            "low": "개발 환경 조사 및 선정이 부족하다."
+          }
+        },
+        {
+          "criterion": "개발 환경에 필요한 요소(언어, OS, 툴, extensions)를 정의할 수 있다.",
+          "scores": {
+            "high": "필요 요소를 구체적으로 정의하고 이유를 설명할 수 있다.",
+            "mid": "필요 요소를 정의할 수 있다.",
+            "low": "필요 요소 정의가 부족하다."
+          }
+        }
+      ]
+    },
+    {
+      "category": "앱 개발 방법론\n조사 및 선정",
+      "items": [
+        {
+          "criterion": "문화 콘텐츠 기획서에 적합한 앱 개발 방법론(Agile, Waterfall, Prototyping 등)을 조사·선정할 수 있다.",
+          "scores": {
+            "high": "개발 방법론을 잘 조사하고 선정 이유를 논리적으로 설명할 수 있다.",
+            "mid": "개발 방법론을 조사하고 선정할 수 있다.",
+            "low": "개발 방법론 조사 및 선정이 부족하다."
+          }
+        }
+      ]
+    },
+    {
+      "category": "개발 환경\n구축 및 테스트",
+      "items": [
+        {
+          "criterion": "VSCode와 GitHub를 이용한 개발 환경을 구축할 수 있다.",
+          "scores": {
+            "high": "VSCode 설치·설정, GitHub repo 생성·clone, extensions 설치 등을 완벽히 구축한다.",
+            "mid": "개발 환경 구축을 수행할 수 있다.",
+            "low": "개발 환경 구축을 제대로 하지 못한다."
+          }
+        },
+        {
+          "criterion": "구축된 개발 환경을 테스트하고 결과를 확인할 수 있다.",
+          "scores": {
+            "high": "테스트를 통해 환경이 정상 작동함을 확인하고 증거(스크린샷 등)를 제시한다.",
+            "mid": "테스트를 수행할 수 있다.",
+            "low": "테스트 및 확인이 부족하다."
+          }
+        }
+      ]
+    },
+    {
+      "category": "앱 개발 계획\n수립하기",
+      "items": [
+        {
+          "criterion": "개발할 앱의 내용과 일정·환경 계획을 포함한 개발 계획서를 작성할 수 있다.",
+          "scores": {
+            "high": "개발 계획서를 체계적으로 작성하고 구체적인 내용을 포함한다.",
+            "mid": "개발 계획서를 작성할 수 있다.",
+            "low": "개발 계획서 작성이 미흡하다."
+          }
+        }
+      ]
+    },
+    {
+      "category": "태도 및\n흥미",
+      "items": [
+        {
+          "criterion": "수업내용과 관련 없는 불필요한 작업을 하지 않는다.",
+          "scores": {
+            "high": "수업내용에 관련 없는 작업을 하지 않고 작업함",
+            "mid": "수업시간에 관련 없는 작업을 가끔 하며 집중하지 못함",
+            "low": "수업시간에 집중하지 않고 매사에 딴 짓함"
+          }
+        },
+        {
+          "criterion": "수업시간에 교사와 호흡하며 집중하는 태도를 나타낸다.",
+          "scores": {
+            "high": "교사와 호흡하며 집중하는 태도를 보임",
+            "mid": "혼자 작업하느라 바빠서 교사와 호흡하지 못함",
+            "low": "아무것도 하지 않음"
+          }
+        }
+      ]
+    },
+    {
+      "category": "의사전달능력",
+      "items": [
+        {
+          "criterion": "발표를 할 때, 듣는 청중에게 명확하게 의사를 전달하며, 또렷한 목소리로 전달할 수 있다",
+          "scores": {
+            "high": "또렷한 목소리로 무엇을 말하고자 하는지 분명하게 잘 발표함",
+            "mid": "분명치 않은 조용한 목소리로 무엇을 말하고자 하는지 발표함",
+            "low": "목소리도 작고, 무엇을 말하고자 하는지도 모르겠음"
+          }
+        }
+      ]
+    }
+  ],
+
+  "detailedScoringItems": [
+    {
+      "category": "앱 개발 환경 조사 및 선정",
+      "items": [
+        { "no": "1.1", "description": "문화 콘텐츠 기획서에 적합한 개발 환경(VSCode, GitHub 등)을 조사 및 선정할 수 있다." },
+        { "no": "1.2", "description": "개발 환경에 필요한 프로그래밍 언어, OS, 툴, extensions 등의 요소를 정의할 수 있다." }
+      ]
+    },
+    {
+      "category": "앱 개발 방법론 조사 및 선정",
+      "items": [{ "no": "2.1", "description": "문화 콘텐츠 기획서에 적합한 앱 개발 방법론을 조사 및 선정할 수 있다." }]
+    },
+    {
+      "category": "개발 환경 구축 및 테스트",
+      "items": [
+        { "no": "3.1", "description": "VSCode 설치·설정, GitHub repository 생성·clone, 필요한 extensions 설치를 수행할 수 있다." },
+        { "no": "3.2", "description": "구축된 개발 환경을 테스트하고 정상 작동 여부를 확인할 수 있다." }
+      ]
+    },
+    {
+      "category": "앱 개발 계획 수립",
+      "items": [{ "no": "4.1", "description": "개발할 앱의 내용, 개발 일정, 환경 계획을 포함한 앱 개발 계획서를 작성할 수 있다." }]
+    },
+    {
+      "category": "태도 및 흥미",
+      "items": [
+        { "no": "5.1", "description": "수업내용과 관련 없는 불필요한 작업을 하지 않는다." },
+        { "no": "5.2", "description": "수업시간에 교사와 호흡하며 집중하는 태도를 나타낸다." }
+      ]
+    },
+    {
+      "category": "의사전달능력",
+      "items": [{ "no": "6.1", "description": "발표를 할 때, 듣는 청중에게 명확하게 의사를 전달하며, 또렷한 목소리로 전달할 수 있다" }]
+    }
+  ],
+
+  "achievementLevels": [
+    { "level": "5수준", "label": "매우우수", "range": "100점-90점" },
+    { "level": "4수준", "label": "우수", "range": "89점-80점" },
+    { "level": "3수준", "label": "보통", "range": "79점-70점" },
+    { "level": "2수준", "label": "미흡", "range": "69점-60점" },
+    { "level": "1수준", "label": "매우미흡", "range": "60점미만" }
+  ],
+
+  "totalScoreItems": 11,
+
+  "evaluationContent": {
+    "targets": ["스마트문화앱 개발환경 구축"],
+    "description": "당신은 스마트문화앱 개발팀의 웹퍼블리셔입니다. 주어진 문화 콘텐츠 기획서(또는 간단한 UI/UX 웹 프로젝트 요구사항)를 바탕으로 스마트문화앱 개발을 위한 개발 환경과 개발 방법론을 조사·선정하고, VSCode + GitHub를 이용해 실제 개발 환경을 구축·테스트한 후, 앱 개발 계획서를 작성하여 결과물을 발표하시오. (NCS 0803020904_24v4 기준)",
+    "tasks": [
+      {
+        "no": 1,
+        "title": "개발 환경 조사 및 선정",
+        "description": "문화 콘텐츠 기획서에 적합한 개발 환경(VSCode, GitHub 등)을 조사하고 선정 이유 및 필요한 요소(언어, OS, 툴, extensions)를 정의하시오."
+      },
+      {
+        "no": 2,
+        "title": "개발 방법론 조사 및 선정",
+        "description": "문화 콘텐츠 기획서에 적합한 앱 개발 방법론(예: Agile, Waterfall, Prototyping 등)을 조사하고 선정 이유를 설명하시오."
+      },
+      {
+        "no": 3,
+        "title": "개발 환경 구축 및 테스트",
+        "subItems": [
+          {
+            "no": "3-1",
+            "title": "VSCode 설치·설정 및 GitHub 연동",
+            "details": ["VSCode 설치, GitHub 계정 연동, Repository 생성·Clone, 필요한 Extensions 설치"]
+          },
+          {
+            "no": "3-2",
+            "title": "개발 환경 테스트",
+            "details": ["기본 프로젝트 구조 생성 후 Git push/pull 테스트 및 스크린샷 제출"]
+          }
+        ]
+      },
+      {
+        "no": 4,
+        "title": "앱 개발 계획 수립 및 발표",
+        "description": "개발할 앱의 내용, 일정, 환경 계획을 포함한 개발 계획서를 작성하고 3~5분간 구두 발표하시오."
+      },
+      {
+        "no": 5,
+        "title": "요구사항",
+        "requirements": [
+          "1) 발표시간은 1인당 3~5분 내외, 준비시간 2분 내외 (질의시간 별도)",
+          "2) 발표자료는 PDF로 준비",
+          "3) 제출파일은 VSCode 프로젝트 폴더, GitHub repo URL, 개발 계획서 PDF, 스크린샷 등을 UIUX_개발환경_이름.zip로 압축하여 제출",
+          "4) 평가시간 내에 모든 작업 완료 후 제출"
+        ]
+      }
+    ]
+  },
+
+  "submissionInfo": {
+    "format": "아래 해당하는 파일들을 압축하여 UIUX_개발환경_이름.zip로 저장하여 제출",
+    "fileName": "개발계획서_이름.pdf",
+    "additionalFiles": "VSCode 프로젝트 폴더, GitHub repo URL, 스크린샷, 기타 증빙 자료"
+  },
+
+  "students": [
+    { "no": 1, "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 2, "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 3, "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 4, "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 5, "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 6, "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 7, "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 8, "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 9, "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 10, "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 11, "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 12, "name": "", "score": null, "pass": null, "comment": "" },
+    { "no": 13, "name": "", "score": null, "pass": null, "comment": "" }
+  ]
+}

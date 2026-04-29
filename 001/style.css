@@ -1,0 +1,408 @@
+/* ===========================================================
+   style.css  —  능력단위 평가 템플릿
+   PDF 원본 공문서 포맷 완전 재현판
+
+   유지보수 가이드:
+   · 색상/크기 조정 : 상단 :root 변수만 수정
+   · 인쇄 스타일   : 하단 @media print 블록
+   · .screen-only  : 화면 전용 (인쇄 시 자동 숨김)
+   =========================================================== */
+
+/* ── 웹폰트 (맑은 고딕 대체) ─────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+/* ── CSS 변수 ─────────────────────────────────────────────── */
+:root {
+  /* 공문서 컬러 — PDF 원본 기준 */
+  --doc-black:   #000000;
+  --doc-border:  #000000;      /* 테이블 외곽선 */
+  --doc-th-bg:   #d9d9d9;      /* 헤더 셀 배경 (연회색) */
+  --doc-td-bg:   #ffffff;      /* 데이터 셀 배경 */
+  --doc-page-bg: #ffffff;      /* 페이지 배경 */
+
+  /* 화면 전용 UI 컬러 */
+  --ui-nav-bg:    #2b2b2b;
+  --ui-nav-text:  #eeeeee;
+  --ui-nav-hover: #555555;
+  --ui-btn-bg:    #444444;
+
+  /* 타이포 */
+  --f-doc: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', sans-serif;
+
+  /* 문서 규격 */
+  --doc-width:    210mm;   /* A4 */
+  --doc-pad-v:    15mm;
+  --doc-pad-h:    18mm;
+
+  /* 테이블 공통 */
+  --cell-pad:  4px 6px;
+  --font-doc:  11pt;
+  --font-sm:   9.5pt;
+}
+
+/* ── 리셋 ────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 14px; }
+
+body {
+  font-family: var(--f-doc);
+  font-size: var(--font-doc);
+  color: var(--doc-black);
+  background: #c8c8c8;      /* 화면에서 페이지 바깥 배경 */
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+/* ── 화면 전용 네비게이션 ─────────────────────────────────── */
+.top-nav {
+  position: sticky; top: 0; z-index: 200;
+  background: var(--ui-nav-bg);
+  border-bottom: 1px solid #111;
+}
+.nav-inner {
+  max-width: 960px; margin: 0 auto;
+  display: flex; align-items: center; gap: 12px;
+  height: 42px; padding: 0 14px;
+}
+.nav-logo {
+  font-size: 13px; font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  margin-right: auto;
+  letter-spacing: .02em;
+}
+.nav-links { list-style: none; display: flex; gap: 2px; }
+.nav-links a {
+  display: block; padding: 4px 9px;
+  color: var(--ui-nav-text);
+  text-decoration: none; font-size: 12px;
+  border-radius: 3px;
+  transition: background .15s;
+}
+.nav-links a:hover,
+.nav-links a.active { background: var(--ui-nav-hover); }
+.btn-print {
+  padding: 5px 13px;
+  background: var(--ui-btn-bg);
+  color: #fff; font-size: 12px;
+  border: 1px solid #777; border-radius: 3px;
+  cursor: pointer; white-space: nowrap;
+}
+.btn-print:hover { background: #666; }
+
+/* ── 로딩 오버레이 ──────────────────────────────────────── */
+.loading-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.7);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 9999;
+  transition: opacity .35s;
+}
+.loading-overlay.hidden { opacity: 0; pointer-events: none; }
+.loader-box { text-align: center; color: #fff; }
+.loader-box p { margin-top: 12px; font-size: 13px; }
+.loader-ring {
+  width: 44px; height: 44px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── 문서 컨테이너 ────────────────────────────────────────── */
+#docRoot {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0 16px 60px;
+  display: flex; flex-direction: column; gap: 24px;
+}
+
+/* ══════════════════════════════════════════════════════════
+   공문서 페이지 — PDF 원본과 동일한 흰 배경 + 검정 테두리
+   ══════════════════════════════════════════════════════════ */
+.doc-page {
+  background: var(--doc-page-bg);
+  padding: var(--doc-pad-v) var(--doc-pad-h);
+  box-shadow: 0 1px 6px rgba(0,0,0,.25);
+  /* 화면에서 A4 비율 유지 */
+  min-height: 270mm;
+}
+
+/* ── 페이지 제목 ─────────────────────────────────────────── */
+.page-title {
+  font-size: 14pt;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: .02em;
+}
+
+/* ══════════════════════════════════════════════════════════
+   공통 테이블 베이스 — 검정 실선 1px, PDF 원본 동일
+   ══════════════════════════════════════════════════════════ */
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10pt;
+  margin-bottom: 8px;
+}
+.doc-table th,
+.doc-table td {
+  border: 1px solid var(--doc-border);
+  padding: var(--cell-pad);
+  vertical-align: middle;
+}
+.doc-table th {
+  background: var(--doc-th-bg);
+  font-weight: 600;
+  text-align: center;
+}
+.doc-table td {
+  background: var(--doc-td-bg);
+}
+
+/* ── 정보 테이블 (과정명/평가날짜 행) ────────────────────── */
+.info-table .info-th-col { width: 72px; }
+.info-table th { font-size: 9.5pt; }
+.info-table td { font-size: 10pt; }
+
+/* ── 서명 테이블 ─────────────────────────────────────────── */
+.sign-table {
+  border: none;
+  margin-bottom: 4px;
+}
+.sign-table td {
+  border: none;
+  padding: 2px 4px;
+  font-size: 10pt;
+}
+.sign-label      { white-space: nowrap; width: 72px; }
+.sign-stamp      { white-space: nowrap; width: 32px; text-align: center; }
+.sign-underline  { border-bottom: 1px solid #000 !important; min-width: 100px; }
+.sign-label-col  { width: 72px; }
+.sign-stamp-col  { width: 32px; }
+
+/* ══════════════════════════════════════════════════════════
+   PAGE 1: 표지
+   ══════════════════════════════════════════════════════════ */
+#page-cover { display: flex; flex-direction: column; gap: 16px; }
+
+.cover-title-wrap {
+  text-align: center;
+  padding: 20px 0 12px;
+  border-bottom: 2px solid #000;
+}
+.cover-year-program {
+  font-size: 13pt; font-weight: 700;
+  margin-bottom: 10px;
+}
+.cover-main-title {
+  font-size: 22pt; font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: .03em;
+}
+.cover-sub-title {
+  font-size: 16pt; font-weight: 600;
+  margin-bottom: 14px;
+}
+.cover-course {
+  font-size: 11pt;
+  margin-bottom: 4px;
+}
+.cover-period {
+  font-size: 10.5pt;
+}
+
+/* 구성 테이블 */
+.cover-toc-table .toc-head-top {
+  font-size: 12pt; font-weight: 700;
+}
+.cover-toc-table .toc-col-label { width: 120px; }
+.cover-toc-table td:first-child {
+  text-align: center;
+  width: 60px;
+}
+
+/* NCS 분류 */
+.cover-ncs-wrap { margin-top: 4px; }
+.cover-ncs-label {
+  font-size: 10pt; font-weight: 700;
+  margin-bottom: 4px;
+}
+
+/* 결재란 */
+.cover-approval-wrap { margin-top: 4px; }
+.approval-table      { width: 260px; }
+.approval-cell       { height: 52px; }
+
+/* 기관명 */
+.cover-institution {
+  text-align: right;
+  font-size: 11pt;
+  font-weight: 700;
+  padding-top: 8px;
+  border-top: 1px solid #000;
+  margin-top: auto;
+}
+
+/* ══════════════════════════════════════════════════════════
+   PAGE 2: 종합 평가 결과표
+   ══════════════════════════════════════════════════════════ */
+.result-table .result-no      { width: 40px;  text-align: center; }
+.result-table .result-name    { width: 100px; }
+.result-table .result-score   { width: 60px;  text-align: center; }
+.result-table .result-pass    { width: 60px;  text-align: center; }
+.result-table .result-comment { }
+.result-table tbody td { height: 22px; }
+.result-table tbody td:first-child,
+.result-table tbody td:nth-child(3),
+.result-table tbody td:nth-child(4) { text-align: center; }
+
+/* ══════════════════════════════════════════════════════════
+   PAGE 3: 채점기준표
+   ══════════════════════════════════════════════════════════ */
+.criteria-table .crit-cat-col { width: 90px;  }
+.criteria-table .crit-std-col { width: 180px; }
+.criteria-table td { font-size: 9.5pt; vertical-align: top; padding: 5px 6px; }
+.criteria-table td.cat-cell {
+  text-align: center;
+  font-weight: 700;
+  background: var(--doc-th-bg);
+  vertical-align: middle;
+  white-space: pre-line;
+  font-size: 9.5pt;
+}
+
+/* ══════════════════════════════════════════════════════════
+   PAGE 4: 평가지 — 내용 테이블
+   ══════════════════════════════════════════════════════════ */
+.content-table .content-label-col { width: 90px; }
+.content-table .content-label {
+  text-align: center;
+  vertical-align: top;
+  font-weight: 700;
+  font-size: 10pt;
+  padding: 8px 6px;
+}
+.content-table .submit-label { vertical-align: middle; }
+.content-table .content-cell {
+  font-size: 10pt;
+  padding: 8px 10px;
+  line-height: 1.7;
+  vertical-align: top;
+}
+.content-cell p     { margin-bottom: 2px; }
+.content-cell .task-indent-1 { padding-left: 18px; }
+.content-cell .task-indent-2 { padding-left: 36px; }
+
+/* ══════════════════════════════════════════════════════════
+   PAGE 5: 채점지
+   ══════════════════════════════════════════════════════════ */
+.scoresheet-table .sc-cat-col  { width: 88px;  }
+.scoresheet-table .sc-desc-col { }
+.scoresheet-table .sc-num-col  { width: 52px; text-align: center; }
+
+.scoresheet-table td.cat-cell {
+  text-align: center;
+  font-weight: 700;
+  background: var(--doc-th-bg);
+  vertical-align: middle;
+  white-space: pre-line;
+  font-size: 9.5pt;
+}
+.scoresheet-table td.score-num {
+  text-align: center;
+  font-size: 10pt;
+}
+
+/* 환산점수 행 */
+.score-formula-cell {
+  font-weight: 600;
+  text-align: left;
+  padding: 5px 10px;
+  background: var(--doc-td-bg) !important;
+  font-size: 10pt;
+}
+
+/* 성취수준 테이블 */
+.achievement-table { margin-top: 4px; }
+.achievement-table td,
+.achievement-table th { text-align: center; font-size: 9.5pt; }
+
+/* 교수자 의견 */
+.opinion-table { margin-top: 4px; }
+.opinion-label { width: 100px; text-align: center; font-size: 10pt; }
+.opinion-cell  { height: 60px; vertical-align: top; }
+
+/* ══════════════════════════════════════════════════════════
+   PAGE 6: 평가근거자료
+   ══════════════════════════════════════════════════════════ */
+.evidence-table .evidence-label {
+  width: 120px; text-align: center;
+  font-size: 11pt; font-weight: 700;
+  letter-spacing: .04em;
+}
+.evidence-table .evidence-cell {
+  font-size: 10.5pt;
+  min-height: 180px;
+  vertical-align: top;
+  padding: 12px 14px;
+}
+
+/* ── 스크롤바 (화면) ─────────────────────────────────────── */
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background: #aaa; }
+::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
+
+/* ══════════════════════════════════════════════════════════
+   인쇄 스타일 — 화면 UI 제거, A4 정확히 출력
+   ══════════════════════════════════════════════════════════ */
+@media print {
+  /* 화면 전용 UI 모두 숨김 */
+  .screen-only,
+  .top-nav,
+  .loading-overlay { display: none !important; }
+
+  @page {
+    size: A4 portrait;
+    margin: 15mm 18mm;
+  }
+
+  html, body {
+    background: #fff !important;
+    font-size: 10pt;
+  }
+
+  #docRoot {
+    max-width: 100%;
+    margin: 0; padding: 0; gap: 0;
+    display: block;
+  }
+
+  .doc-page {
+    box-shadow: none;
+    padding: 0;               /* @page margin 이 여백 담당 */
+    min-height: auto;
+    page-break-after: always;
+    break-after: page;
+  }
+  .doc-page:last-child {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  /* 테이블 배경색 인쇄 강제 */
+  .doc-table th {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .criteria-table td.cat-cell,
+  .scoresheet-table td.cat-cell {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* 테이블 행이 페이지 경계에서 잘리지 않도록 */
+  .doc-table tr { page-break-inside: avoid; break-inside: avoid; }
+}
