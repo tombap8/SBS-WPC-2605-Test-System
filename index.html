@@ -33,6 +33,15 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             font-size: 2em;
         }
+        h3 {
+            background-color: #e02899;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            font-size: 1.7em;
+        }
         .links {
             display: flex;
             flex-wrap: wrap;
@@ -55,12 +64,17 @@
         .links a:hover {
             background-color: #0056b3;
         }
+        @media only screen and (max-width:1000px) {
+            h1, h2, h3 {
+                font-size: 2.5vmax;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>훈련기관 : SBS아카데미컴퓨터아트학원_종로</h1>
-        <h2>과 정 명 : (스마트웹&콘텐츠개발) UIUX 웹디자인 (웹퍼블리셔) 양성과정</h2>
+        <h1>SBS아카데미컴퓨터아트학원 | 종로</h1>
+        <h2>(스마트웹&콘텐츠개발) UIUX 웹디자인<br>(웹퍼블리셔) 양성과정</h2>
         <h3>&lt;평가 바로 가기&gt;</h3>
         <ul class="links">
             <li><a href="#" onclick="window.open('./001/', '_blank')">01. 스마트문화앱 개발환경구축</a></li>
